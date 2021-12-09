@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best online food delivery services in India | BestMeals.com</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+    <link rel="stylesheet" media="screen and (max-width: 950px)"href="{%static 'phone.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    img {
+        height: 70px;
+        width: 70px;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <a href="{% url 'index' %}">{%load static%}<img src="{% static 'food/media/FoodLogo.png' %}" alt="Food Logo"></a>
+            <!-- {%load static%}<img src="{% static 'food/media/FoodLogo.png' %}" alt="Food Logo"> -->
+        </div>
+
+        <ul>
+            <li class="items"><a href="{% url 'index' %}">Home</a></li>
+            <li class="items"><a href="{% url 'index' %}">Services</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <section id="services-container">
+        <h1 class="h-primary center">Veg Food Items</h1>
+        <div id="services">
+        {% for item in items %}
+        {% if item.category == 'veg' %}
+        
+            <div class="box">
+                <a href="{% url 'item' item.id %}" target="_blank">{%load static%}<img src="{{item.image}}" alt="Paratha"></a>
+                <!-- {%load static%}<img src="{% static 'food/media/paratha.jfif' %}" alt="paratha"> -->
+                <h2 class="h-secondary center">{{item.name}}</h2>
+                <p class="center">
+                    
+                </p>
+            </div>
+            {% endif %}
+            {% endfor %}
+            
+
+        </div>
+
+    </section>
+    <h1 class="h-primary center">Non Veg Food Items</h1>
+    <div id="services">
+        {% for item in items %}
+        {% if item.category == 'nonveg' %}
+       
+            <div class="box">
+                <a href="{% url 'item' item.id %}" target="_blank">{%load static%}<img src="{{item.image}}" alt="Paratha"></a>
+                <!-- {%load static%}<img src="{% static 'food/media/paratha.jfif' %}" alt="paratha"> -->
+                <h2 class="h-secondary center">{{item.name}}</h2>
+                <p class="center">
+                    
+                </p>
+            </div>
+            {% endif %}
+            {% endfor %}
+            
+
+        </div>
+
+    </section>
+    
+
+    
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.BestMeal.com. All right reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

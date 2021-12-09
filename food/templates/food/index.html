@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best online food delivery services in India | BestMeals.com</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+    <link rel="stylesheet" media="screen and (max-width: 950px)"href="{%static 'phone.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+
+</head>
+<style>
+    img {
+        height: 70px;
+        width: 70px;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <a href="{% url 'index' %}">{%load static%}<img src="{% static 'food/media/FoodLogo.png' %}" alt="Food Logo"></a>
+            <!-- {%load static%}<img src="{% static 'food/media/FoodLogo.png' %}" alt="Food Logo"> -->
+        </div>
+
+        <ul>
+            <li class="items"><a href="{% url 'index' %}">Home</a></li>
+            <li class="items"><a href="{% url 'order' %}">Order Food</a></li>
+            <li class="items"><a href="#client-section">Our Clients</a></li>
+            <br>
+            
+
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to BestMeal</h1>
+        <p>One of the top Food Meal in Pune, Mumbai, Nagpur</p>
+        <p></p>
+        <a href="{% url 'order' %}"><button class ="btn">Order Food</button></a>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                {%load static%}<img src="{% static 'food/media/CateringFood.jfif' %}" alt="Veg Food">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">
+                    We provide you with best Food Catering services
+                </p>
+            </div>
+            <div class="box">
+                {%load static%}<img src="{% static 'food/media/BulkFood.jfif' %}" alt="Veg Food">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">
+                    Hurry up!!!There is extra discount on Bulk Ordering
+                </p>
+            </div>
+            <div class="box">
+                {%load static%}<img src="{% static 'food/media/VegNonVeg.jfif' %}" alt="Variety Food">
+                <h2 class="h-secondary center">Variety Food</h2>
+                <p class="center">
+                    There are so many variety of Veg, Non-veg food items availiable here. 
+                </p>
+            </div>
+            <div class="box">
+                {%load static%}<img src="{% static 'food/media/Orderfood.jfif' %}" alt="Veg Food">
+                <h2 class="h-secondary center">Ordering Food</h2>
+                <p class="center">
+                    We place your order within 30min.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+
+        <div id="clients">
+            <div class="client-item">
+                {%load static%}<img src="{% static 'food/media/AppleLogo.jfif' %}" alt="AppleLogo">
+            </div>
+            <div class="client-item">
+                {%load static%}<img src="{% static 'food/media/WiproLogo.png' %}" alt="WiproLogo">
+            </div>
+            <div class="client-item">
+                {%load static%}<img src="{% static 'food/media/MicrosoftLogo.png' %}" alt="MicrosoftLogo">
+            </div>
+            <div class="client-item">
+                {%load static%}<img src="{% static 'food/media/TataLogo.png' %}" alt="TataLogo">
+            </div>
+            <div class="client-item">
+                {%load static%}<img src="{% static 'food/media/HpLogo.png' %}" alt="HpLogo">
+            </div>
+        </div>
+
+    </section>
+
+    
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.BestMeal.com. All right reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
